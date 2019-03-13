@@ -4,7 +4,7 @@
 
 // @flow
 import React, { PureComponent, Fragment } from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
 import { ContextMenu, MenuItem } from 'react-contextmenu';
 import explicitConnect from '../../utils/connect';
 import { selectedThreadSelectors } from '../../selectors/per-thread';
@@ -369,10 +369,7 @@ class CallNodeContextMenu extends PureComponent<Props, State> {
     if (this.state.isShown && this._contextMenu) {
       const contextMenuNode = ReactDOM.findDOMNode(this._contextMenu);
       if (contextMenuNode) {
-          contextMenuNode.addEventListener(
-            'mousedown',
-            this._mouseDownHandler
-          );
+        contextMenuNode.addEventListener('mousedown', this._mouseDownHandler);
       }
     }
   }
